@@ -1,0 +1,5 @@
+CREATE TABLE information(student_id varchar(40),firstname varchar(40),lastname varchar(40) ,gender varchar(10),email varchar(40),PRIMARY KEY(student_id));
+CREATE TABLE faculty(faculty_id int,PRIMARY KEY(faculty_id),facutly_name varchar(40));
+INSERT INTO faculty VALUES(1,'Agriculture'),(2,'Architecture'),(3,'Civil'),(4.'Computer').(5,'Electrical'),(6,'Electronics'),(6,'Mechanical');
+CREATE TABLE course(student_id varchar(40),FOREIGN KEY(student_id) REFERENCES  information(student_id),faculty_id int ,FOREGIN KEY(faculty_id) REFERENCE faculty(faculty_id),semester varchar(40),section varchar(40));
+
